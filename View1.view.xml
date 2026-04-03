@@ -1,0 +1,38 @@
+<mvc:View controllerName="ZG_DISPLAY_SALES.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<HBox alignItems="Center" justifyContent="Center" height="70px">
+							<Text text="Name: {studentModel>/student/name}" class="sapUiSmallMarginEnd" />
+							<Text text="Phone number: {studentModel>/student/phone}" class="sapUiSmallMarginEnd" />
+							<Button text="Afficher" press="onPress" />
+					</HBox>
+					<Table items="{/SalesDetailsSet}" growing="true" growingThreshold="10">
+						<columns>
+							<Column><Label text="Salesno" /></Column>
+							<Column><Label text="Sales Item" /></Column>
+							<Column><Label text="Material" /></Column>
+							<Column><Label text="Value" /></Column>
+							<Column><Label text="Delivery" /></Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{Salesno}"/>
+									<Text text="{SalesItem}"/>
+									<Text text="{Material}"/>
+									<Text text="{SalesValue}"/>
+									<Text text="{Delivery}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+
+				</content>
+			</Page>
+		</pages>
+	</App>
+
+</mvc:View>
